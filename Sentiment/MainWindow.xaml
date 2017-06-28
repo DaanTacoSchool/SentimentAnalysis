@@ -1,0 +1,31 @@
+﻿<Window x:Class="Sentiment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sentiment"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="btnSelectPHP" Content="Select PHP.exe" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" Width="112" Height="23" Click="Button_Click_1"/>
+        <Button x:Name="btnSentiment" Content="Sentiment Analysis" HorizontalAlignment="Left" Margin="19,94,0,0" VerticalAlignment="Top" Width="112" Height="23" Click="Button_Click" IsEnabled="False" />
+        <TextBox x:Name="sentiment" HorizontalAlignment="Left" Height="23" Margin="150,94,0,0" TextWrapping="Wrap" Text="SentimentScore.txt" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="tweets" HorizontalAlignment="Left" Height="23" Margin="275,94,0,0" TextWrapping="Wrap" Text="tweets.txt" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" RenderTransformOrigin="0.477,0.52"/>
+        <TextBox x:Name="phpPath" HorizontalAlignment="Left" Height="23" Margin="150,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" TextChanged="phpPath_TextChanged" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtStatus" HorizontalAlignment="Left" Height="23" Margin="275,38,0,0" TextWrapping="Wrap" Text="Off" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center"/>
+        <Button x:Name="btnStartServer" Content="Start Server" HorizontalAlignment="Left" Margin="19,38,0,0" VerticalAlignment="Top" Width="112" Height="23" IsEnabled="False" Click="btnStartServer_Click"/>
+        <Button x:Name="btnRetrieveTweets" Content="Retrieve new tweets" HorizontalAlignment="Left" Margin="19,66,0,0" VerticalAlignment="Top" Width="112" Height="23" IsEnabled="False" Click="btnRetrieveTweets_Click"/>
+        <TextBox x:Name="txtTweetSucces" HorizontalAlignment="Left" Height="23" Margin="275,66,0,0" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtPort" HorizontalAlignment="Left" Height="23" Margin="150,38,0,0" TextWrapping="Wrap" Text="Port" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.236,0.878" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtNumTweets" HorizontalAlignment="Left" Height="23" Margin="150,66,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center"/>
+        <Button x:Name="btnTermFrequency" Content="Term Frequency" HorizontalAlignment="Left" Margin="19,121,0,0" VerticalAlignment="Top" Width="112" Height="24" Click="btnTermFrequency_Click" IsEnabled="False"/>
+        <TextBox x:Name="txtFrequency" HorizontalAlignment="Left" Height="23" Margin="150,122,0,0" TextWrapping="Wrap" Text="tweets.txt" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtStateMoods" HorizontalAlignment="Left" Height="23" Margin="275,150,0,0" TextWrapping="Wrap" Text="tweets.txt" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center"/>
+        <Button x:Name="btnStateMood" Content="Happiest State" HorizontalAlignment="Left" Margin="19,150,0,0" VerticalAlignment="Top" Width="112" Height="23" IsEnabled="False" Click="btnStateMood_Click"/>
+        <TextBox x:Name="txtStatemoodsSent" HorizontalAlignment="Left" Height="23" Margin="150,150,0,0" TextWrapping="Wrap" Text="SentimentScore.txt" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" TextChanged="txtStatemoodsSent_TextChanged" RenderTransformOrigin="0.499,0.602"/>
+        <TextBox x:Name="txtHash" HorizontalAlignment="Left" Height="23" Margin="150,178,0,0" TextWrapping="Wrap" Text="tweets.txt" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center"/>
+        <Button x:Name="btnHashtags" Content="Common Hashtags" HorizontalAlignment="Left" Margin="19,178,0,0" VerticalAlignment="Top" Width="112" Height="23" IsEnabled="False" Click="btnHashtags_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="105" Width="394"><Run Text="PHP 5.4.1+ required to run the scripts. Server only required when retrieving new tweets* (min 1 max 100). Tweets without text will not be included in Sentiment Analysis."/><LineBreak/><Run Text="Place SentimentScore.txt and file with tweets in same folder as executable for the program to work correctly."/><LineBreak/><Run Text="*Place cacert.pem in &quot;C:/&quot; to retrieve new tweets. (SSL certificate)"/></TextBlock>
+
+    </Grid>
+</Window>

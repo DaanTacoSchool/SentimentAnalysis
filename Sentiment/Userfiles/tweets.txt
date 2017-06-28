@@ -1,0 +1,1 @@
+{"statuses":[],"search_metadata":{"completed_in":0.051,"max_id":850695136581373952,"max_id_str":"850695136581373952","query":"microsoft","refresh_url":"?since_id=850695136581373952&q=microsoft&include_entities=1","count":1,"since_id":0,"since_id_str":"0"}}
